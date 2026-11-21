@@ -1,0 +1,50 @@
+# ---- Private / runtime data: NEVER commit these ----------------------------
+# App data folder (search history, favourites, settings, logs, replacement workbook)
+gst_data/
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# Invoice images and scans (they contain business names, GSTINs, addresses, phone numbers)
+invoices/
+uploads/
+scans/
+*.heic
+*.heif
+
+# Files the app exports (may contain a customer's item lists)
+gst_*.xlsx
+gst_*.csv
+*_gst_results*.xlsx
+*_output.xlsx
+
+# Excel lock/temp files
+~$*.xlsx
+.~lock.*
+
+# ---- Colab / Jupyter -------------------------------------------------------
+# The notebook prints a public tunnel URL when it runs. Clear outputs before committing app.ipynb
+# (Edit > Clear all outputs), otherwise the link is saved in the file.
+.ipynb_checkpoints/
+cloudflared
+cloudflared.log
+streamlit.log
+nohup.out
+
+# ---- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.streamlit/secrets.toml
+.env
+*.env
+
+# ---- OS / editor -----------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

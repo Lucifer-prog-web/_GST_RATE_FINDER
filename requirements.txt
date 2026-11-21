@@ -1,0 +1,11 @@
+# GST Rate Finder - Python libraries (Google Colab / any Python 3.9+)
+# Install:  pip install -r requirements.txt
+# Lower bounds only, so Colab's own numpy / pandas / pillow are kept when they are already new enough.
+streamlit>=1.40          # app framework (st.container(key=...) needs 1.39+)
+pandas>=2.0              # tables
+numpy>=1.24              # image processing for invoice scan
+openpyxl>=3.1            # read / write .xlsx (HSN workbook, bulk and invoice downloads)
+rapidfuzz>=3.0           # fuzzy product-name matching
+pillow>=10.0             # image handling for invoice scan
+pytesseract>=0.3.10      # Python wrapper for the Tesseract OCR program (invoice scan)
+pillow-heif>=0.16        # optional: lets iPhone HEIC photos be read
